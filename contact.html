@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marvel TV</title>
+    <style>
+        body {
+            color: #ffffff;
+            font-size: larger;
+            display: flex;
+            flex-direction: column;
+            font-family: 'Poppins', Arial, Helvetica, sans-serif;
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            background-color: #02011a;
+            overflow-x: hidden;
+        }
+        header {
+            font-family: 'BentonSansCompBlack', sans-serif;
+            background-color: #000000;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(16, 92, 130, 0.5);
+            font-size: 30px;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #172b6f;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+            animation: fadeIn 0.5s ease-in-out;
+        }
+        nav a {
+            color: #fff;
+            padding: 14px 20px;
+            text-decoration: none;
+            text-align: center;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+        nav a:hover {
+            background-color: #067573;
+            transform: scale(1.1);
+        }
+        main {
+            padding: 20px;
+            margin: 20px 50px;
+            flex: 2;
+        }
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+            width: 100%;
+            bottom: 0;
+            position: relative;
+        }
+        p {
+            color: #ffffff;
+            font-family: "DM Sans", sans-serif;
+            font-weight: 300;
+            font-style: normal;
+            font-size: 25px;
+            white-space: pre-wrap;
+        }
+        .intro {
+            font-size: 30px;
+            font-family: 'Poppins', sans-serif;
+            text-align: center;
+            margin-bottom: 20px;
+            animation: fadeIn 3.5s ease-in-out;
+        }
+        section {
+            margin-bottom: 40px;
+            padding: 20px;
+            background: rgba(19, 28, 60, 0.8);
+            border-radius: 50px;
+            box-shadow: 0 4px 8px rgba(39, 53, 124, 0.5);
+            animation: slideUp 3.5s ease-in-out;
+        }
+        section h3 {
+            font-size: 30px;
+            margin-bottom: 15px;
+        }
+        section h4 {
+            font-size: 24px;
+            margin-top: 15px;
+        }
+        iframe {
+            display: block;
+            margin: 0 auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+            transition: transform 0.3s;
+        }
+        iframe:hover {
+            transform: scale(1.05);
+        }
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+        @keyframes slideUp {
+            from {
+                transform: translateY(100px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&family=Andika:wght@400&family=Poppins:wght@400&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <img src="./img/marvellogo.png" alt="No Image" height="80px">
+    </header>
+    <nav>
+        <a href="./index.html">Home</a>
+        <a href="./characters.html">Characters</a>
+        <a href="./shows.html">Shows</a>
+        <a href="./join.html">Join Us</a>
+        <a href="./contact.html">Contact</a>
+        <a href="./about.html">About Us</a>
+    </nav>
+    <main>
+        <section>
+            <h1>Contact</h1>
+        <p>Marvel Entertainment, LLC, a wholly-owned subsidiary of The Walt Disney Company, is one of the world's most prominent character-based entertainment companies, built on a proven library of more than 8,000 characters featured in a variety of media over seventy-five years. Marvel utilizes its character franchises in entertainment, licensing and publishing. For more information visit marvel.com. © 2023 MARVEL</p>
+        </section>
+        <section>
+            <h1>Corporate Headquarters</h1>
+            <p>Marvel Entertainment, LLC <br>1290 Avenue of the Americas <br>New York, NY 10104</p>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Marvel TV. All rights reserved.</p>
+    </footer>
+</body>
+</html>

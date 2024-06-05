@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Join</title>
+    <style>
+        body {
+            color: #ffffff;
+            font-size: larger;
+            display: flex;
+            flex-direction: column;
+            font-family: 'Poppins', Arial, Helvetica, sans-serif;
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            background-color: #02011a;
+            overflow-x: hidden;
+        }
+        header {
+            font-family: 'BentonSansCompBlack', sans-serif;
+            background-color: #000000;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(16, 92, 130, 0.5);
+            font-size: 30px;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #172b6f;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+            animation: fadeIn 0.5s ease-in-out;
+        }
+        nav a {
+            color: #fff;
+            padding: 14px 20px;
+            text-decoration: none;
+            text-align: center;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+        nav a:hover {
+            background-color: #067573;
+            transform: scale(1.1);
+        }
+        main {
+            padding: 20px;
+            margin: 20px 50px;
+            flex: 2;
+        }
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+            width: 100%;
+            bottom: 0;
+            position: relative;
+        }
+        p {
+            color: #ffffff;
+            font-family: "DM Sans", sans-serif;
+            font-weight: 300;
+            font-style: normal;
+            font-size: 25px;
+            white-space: pre-wrap;
+        }
+        form {
+            font-family: "DM Sans", sans-serif;
+            background-color: #0e0335;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            animation: slideUp 2.5s ease-in-out;
+        }
+        label {
+            font-size: 18px;
+            font-weight: bold;
+        }
+        input, select {
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        button {
+            padding: 10px;
+            background-color: #067573;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 18px;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+        section {
+            font-family: "DM Sans", sans-serif;
+        }
+        section input{
+            font-family: "DM Sans", sans-serif;
+        }
+        button:hover {
+            background-color: #045a5a;
+            transform: scale(1.05);
+        }
+        @keyframes slideUp {
+            from {
+                transform: translateY(100px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&family=Andika:wght@400&family=Poppins:wght@400&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <img src="./img/marvellogo.png" alt="No Image" height="80px">
+    </header>
+    <nav>
+        <a href="./index.html">Home</a>
+        <a href="./characters.html">Characters</a>
+        <a href="./shows.html">Shows</a>
+        <a href="./join.html">Join Us</a>
+        <a href="./contact.html">Contact</a>
+        <a href="./about.html">About Us</a>
+    </nav>
+    <main>
+        <center><h1 style="animation: fadeIn 3.5s ease-in-out;">Registration Form</h1></center>
+        <form action="join.py" method="post">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" placeholder="Enter Your Username" required>
+            
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" placeholder="Enter Your Name" required>
+            
+            <label for="address">Address:</label>
+            <textarea style="font-size: 18px;" id="address" rows="5" cols="20" name="address" placeholder="Enter Your Address" required></textarea>
+            
+            <label for="country">Country:</label>
+            <select id="country" name="country" onchange="updatePhoneNumberPlaceholder()">
+                <option value="none">Select</option>
+                <option value="AF">Afghanistan</option>
+                <option value="AL">Albania</option>
+                <option value="DZ">Algeria</option>
+                <option value="AD">Andorra</option>
+                <option value="AO">Angola</option>
+                <option value="AR">Argentina</option>
+                <option value="AM">Armenia</option>
+                <option value="AU">Australia</option>
+                <option value="AT">Austria</option>
+                <option value="AZ">Azerbaijan</option>
+                <option value="BS">Bahamas</option>
+                <option value="BH">Bahrain</option>
+                <option value="BD">Bangladesh</option>
+                <option value="BB">Barbados</option>
+                <option value="BY">Belarus</option>
+                <option value="BE">Belgium</option>
+                <option value="BZ">Belize</option>
+                <option value="BJ">Benin</option>
+                <option value="BT">Bhutan</option>
+                <option value="BO">Bolivia</option>
+                <option value="BA">Bosnia and Herzegovina</option>
+                <option value="BW">Botswana</option>
+                <option value="BR">Brazil</option>
+                <option value="BN">Brunei</option>
+                <option value="BG">Bulgaria</option>
+                <option value="BF">Burkina Faso</option>
+                <option value="BI">Burundi</option>
+                <option value="CV">Cabo Verde</option>
+                <option value="KH">Cambodia</option>
+                <option value="CM">Cameroon</option>
+                <option value="CA">Canada</option>
+                <option value="CF">Central African Republic</option>
+                <option value="TD">Chad</option>
+                <option value="CL">Chile</option>
+                <option value="CN">China</option>
+                <option value="CO">Colombia</option>
+                <option value="KM">Comoros</option>
+                <option value="CG">Congo</option>
+                <option value="CR">Costa Rica</option>
+                <option value="HR">Croatia</option>
+                <option value="CU">Cuba</option>
+                <option value="CY">Cyprus</option>
+                <option value="CZ">Czech Republic</option>
+                <option value="DK">Denmark</option>
+                <option value="DJ">Djibouti</option>
+                <option value="DM">Dominica</option>
+                <option value="DO">Dominican Republic</option>
+                <option value="EC">Ecuador</option>
+                <option value="EG">Egypt</option>
+                <option value="SV">El Salvador</option>
+                <option value="GQ">Equatorial Guinea</option>
+                <option value="ER">Eritrea</option>
+                <option value="EE">Estonia</option>
+                <option value="ET">Ethiopia</option>
+                <option value="FJ">Fiji</option>
+                <option value="FI">Finland</option>
+                <option value="FR">France</option>
+                <option value="GA">Gabon</option>
+                <option value="GM">Gambia</option>
+                <option value="GE">Georgia</option>
+                <option value="DE">Germany</option>
+                <option value="GH">Ghana</option>
+                <option value="GR">Greece</option>
+                <option value="GD">Grenada</option>
+                <option value="GT">Guatemala</option>
+                <option value="GN">Guinea</option>
+                <option value="GW">Guinea-Bissau</option>
+                <option value="GY">Guyana</option>
+                <option value="HT">Haiti</option>
+                <option value="HN">Honduras</option>
+                <option value="HU">Hungary</option>
+                <option value="IS">Iceland</option>
+                <option value="IN">India</option>
+                <option value="ID">Indonesia</option>
+                <option value="IR">Iran</option>
+                <option value="IQ">Iraq</option>
+                <option value="IE">Ireland</option>
+                <option value="IL">Israel</option>
+                <option value="IT">Italy</option>
+                <option value="JM">Jamaica</option>
+                <option value="JP">Japan</option>
+                <option value="JO">Jordan</option>
+                <option value="KZ">Kazakhstan</option>
+                <option value="KE">Kenya</option>
+                <option value="KI">Kiribati</option>
+                <option value="KP">Korea (North)</option>
+                <option value="KR">Korea (South)</option>
+                <option value="KW">Kuwait</option>
+                <option value="KG">Kyrgyzstan</option>
+                <option value="LA">Laos</option>
+                <option value="LV">Latvia</option>
+                <option value="LB">Lebanon</option>
+                <option value="LS">Lesotho</option>
+                <option value="LR">Liberia</option>
+                <option value="LY">Libya</option>
+                <option value="LI">Liechtenstein</option>
+                <option value="LT">Lithuania</option>
+                <option value="LU">Luxembourg</option>
+                <option value="MG">Madagascar</option>
+                <option value="MW">Malawi</option>
+                <option value="MY">Malaysia</option>
+                <option value="MV">Maldives</option>
+                <option value="ML">Mali</option>
+                <option value="MT">Malta</option>
+                <option value="MH">Marshall Islands</option>
+                <option value="MR">Mauritania</option>
+                <option value="MU">Mauritius</option>
+                <option value="MX">Mexico</option>
+                <option value="FM">Micronesia</option>
+                <option value="MD">Moldova</option>
+                <option value="MC">Monaco</option>
+                <option value="MN">Mongolia</option>
+                <option value="ME">Montenegro</option>
+                <option value="MA">Morocco</option>
+                <option value="MZ">Mozambique</option>
+                <option value="MM">Myanmar</option>
+                <option value="NA">Namibia</option>
+                <option value="NR">Nauru</option>
+                <option value="NP">Nepal</option>
+                <option value="NL">Netherlands</option>
+                <option value="NZ">New Zealand</option>
+                <option value="NI">Nicaragua</option>
+                <option value="NE">Niger</option>
+                <option value="NG">Nigeria</option>
+                <option value="NO">Norway</option>
+                <option value="OM">Oman</option>
+                <option value="PK">Pakistan</option>
+                <option value="PW">Palau</option>
+                <option value="PA">Panama</option>
+                <option value="PG">Papua New Guinea</option>
+                <option value="PY">Paraguay</option>
+                <option value="PE">Peru</option>
+                <option value="PH">Philippines</option>
+                <option value="PL">Poland</option>
+                <option value="PT">Portugal</option>
+                <option value="QA">Qatar</option>
+                <option value="RO">Romania</option>
+                <option value="RU">Russia</option>
+                <option value="RW">Rwanda</option>
+                <option value="KN">Saint Kitts and Nevis</option>
+                <option value="LC">Saint Lucia</option>
+                <option value="VC">Saint Vincent and the Grenadines</option>
+                <option value="WS">Samoa</option>
+                <option value="SM">San Marino</option>
+                <option value="ST">Sao Tome and Principe</option>
+                <option value="SA">Saudi Arabia</option>
+                <option value="SN">Senegal</option>
+                <option value="RS">Serbia</option>
+                <option value="SC">Seychelles</option>
+                <option value="SL">Sierra Leone</option>
+                <option value="SG">Singapore</option>
+                <option value="SK">Slovakia</option>
+                <option value="SI">Slovenia</option>
+                <option value="SB">Solomon Islands</option>
+                <option value="SO">Somalia</option>
+                <option value="ZA">South Africa</option>
+                <option value="ES">Spain</option>
+                <option value="LK">Sri Lanka</option>
+                <option value="SD">Sudan</option>
+                <option value="SR">Suriname</option>
+                <option value="SZ">Swaziland</option>
+                <option value="SE">Sweden</option>
+                <option value="CH">Switzerland</option>
+                <option value="SY">Syria</option>
+                <option value="TW">Taiwan</option>
+                <option value="TJ">Tajikistan</option>
+                <option value="TZ">Tanzania</option>
+                <option value="TH">Thailand</option>
+                <option value="TL">Timor-Leste</option>
+                <option value="TG">Togo</option>
+                <option value="TO">Tonga</option>
+                <option value="TT">Trinidad and Tobago</option>
+                <option value="TN">Tunisia</option>
+                <option value="TR">Turkey</option>
+                <option value="TM">Turkmenistan</option>
+                <option value="TV">Tuvalu</option>
+                <option value="UG">Uganda</option>
+                <option value="UA">Ukraine</option>
+                <option value="AE">United Arab Emirates</option>
+                <option value="GB">United Kingdom</option>
+                <option value="US">United States</option>
+                <option value="UY">Uruguay</option>
+                <option value="UZ">Uzbekistan</option>
+                <option value="VU">Vanuatu</option>
+                <option value="VE">Venezuela</option>
+                <option value="VN">Vietnam</option>
+                <option value="YE">Yemen</option>
+                <option value="ZM">Zambia</option>
+                <option value="ZW">Zimbabwe</option>
+            </select>
+            <label for="state">State:</label>
+            <input type="text" id="state" name="state" placeholder="Enter Your State">
+
+            <label for="city">City:</label>
+            <input type="text" id="city" name="city" placeholder="Enter Your City">
+            
+            <label for="postal-code">Postal Code:</label>
+            <input type="text" id="postal-code" name="postal-code" placeholder="Enter Your Pin code">
+            
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" placeholder="Enter Your Phone Number" required>
+            <section>
+                <input type="submit" value="Register">
+            </section>
+        </form>
+    </main>
+    <script>
+        function updatePhoneNumberPlaceholder() {
+            const countrySelect = document.getElementById('country');
+            const phoneInput = document.getElementById('phone');
+            const countryCode = countrySelect.value;
+            const placeholder = phonePlaceholders[countryCode] || "Enter your phone number";
+            phoneInput.placeholder = placeholder;
+        }
+
+        const phonePlaceholders = {
+    "none": "Enter Your Phone Number",
+    "AF": "+93 XX XXX XXXX",
+    "AL": "+355 XX XXX XXXX",
+    "DZ": "+213 XX XX XX XX XX",
+    "AD": "+376 XXX XXX",
+    "AO": "+244 XXX XXX XXX",
+    "AR": "+54 X XXXX-XXXX",
+    "AM": "+374 XX XXX XXX",
+    "AU": "+61 XXXX XXX XXX",
+    "AT": "+43 XXXX XXXXXX",
+    "AZ": "+994 XX XXX XX XX",
+    "BS": "+1 (242) XXX-XXXX",
+    "BH": "+973 XXXX XXXX",
+    "BD": "+880 XXXX-XXXXXX",
+    "BB": "+1 (246) XXX-XXXX",
+    "BY": "+375 XX XXX XX XX",
+    "BE": "+32 XXX XX XX XX",
+    "BZ": "+501 XXX-XXXX",
+    "BJ": "+229 XX XX XX XX",
+    "BT": "+975 XX XX XXX",
+    "BO": "+591 XXXX-XXXX",
+    "BA": "+387 XX XXX XXX",
+    "BW": "+267 XX XXX XXX",
+    "BR": "+55 XX XXXX-XXXX",
+    "BN": "+673 XXX-XXXX",
+    "BG": "+359 XX XXX XXX",
+    "BF": "+226 XX XX XX XX",
+    "BI": "+257 XX XX XX XX",
+    "CV": "+238 XXX XXXX",
+    "KH": "+855 XX XXX XXX",
+    "CM": "+237 XXXX-XXXX",
+    "CA": "+1 (XXX) XXX-XXXX",
+    "CF": "+236 XX XX XX XX",
+    "TD": "+235 XX XX XX XX",
+    "CL": "+56 X XXXX-XXXX",
+    "CN": "+86 XXXX-XXXXXXX",
+    "CO": "+57 XXX XXX XXXX",
+    "KM": "+269 XX XX XX",
+    "CG": "+242 XXX-XX-XX-XXX",
+    "CR": "+506 XXXX-XXXX",
+    "HR": "+385 XX XXX XXXX",
+    "CU": "+53 XX XXX XXX",
+    "CY": "+357 XX XXXXXX",
+    "CZ": "+420 XXX XXX XXX",
+    "DK": "+45 XX XX XX XX",
+    "DJ": "+253 XX XX XX XX",
+    "DM": "+1 (767) XXX-XXXX",
+    "DO": "+1 (809) XXX-XXXX",
+    "EC": "+593 XX XXX XXXX",
+    "EG": "+20 XX XXXX XXXX",
+    "SV": "+503 XXXX-XXXX",
+    "GQ": "+240 XXX XXX XXX",
+    "ER": "+291 XX XXX XXX",
+    "EE": "+372 XXXX XXXX",
+    "ET": "+251 XX XXX XXXX",
+    "FJ": "+679 XXX XXXX",
+    "FI": "+358 XX XXXXXXX",
+    "FR": "+33 X XX XX XX XX",
+    "GA": "+241 XX XX XX XX",
+    "GM": "+220 XXX XXXX",
+    "GE": "+995 XXX XXX XXX",
+    "DE": "+49 XXXX XXXXXX",
+    "GH": "+233 XX XXX XXXX",
+    "GR": "+30 XXX XXX XXXX",
+    "GD": "+1 (473) XXX-XXXX",
+    "GT": "+502 XXXX-XXXX",
+    "GN": "+224 XX XXX XXX",
+    "GW": "+245 XX XXX XXXX",
+    "GY": "+592 XXX XXXX",
+    "HT": "+509 XXXX-XXXX",
+    "HN": "+504 XXXX-XXXX",
+    "HU": "+36 XX XXX XXXX",
+    "IS": "+354 XXX XXXX",
+    "IN": "+91 XXXXX XXXXX",
+    "ID": "+62 XXX-XXXX-XXXX",
+    "IR": "+98 XXX XXXX XXXX",
+    "IQ": "+964 XXX XXX XXXX",
+    "IE": "+353 XX XXX XXXX",
+    "IL": "+972 XX-XXX-XXXX",
+    "IT": "+39 XXX XXX XXXX",
+    "JM": "+1 (876) XXX-XXXX",
+    "JP": "+81 XX XXXX-XXXX",
+    "JO": "+962 XX XXX XXXX",
+    "KZ": "+7 XXX XXX-XX-XX",
+    "KE": "+254 XXX XXXXXX",
+    "KI": "+686 XXXXX",
+    "KP": "+850 XXXX XXXX",
+    "KR": "+82 XX XXXX-XXXX",
+    "KW": "+965 XXXX XXXX",
+    "KG": "+996 XXX XXXXXX",
+    "LA": "+856 XX XXX XXX",
+    "LV": "+371 XX XXX XXX",
+    "LB": "+961 XX XXX XXX",
+    "LS": "+266 XXXX XXXX",
+    "LR": "+231 XXXX XXXX",
+    "LY": "+218 XX XXX XXXX",
+    "LI": "+423 XXX XX XX",
+    "LT": "+370 XXX XXXXX",
+    "LU": "+352 XXX XXX XXX",
+    "MG": "+261 XX XX XX XXX",
+    "MW": "+265 X XXX XXX",
+    "MY": "+60 XXXX-XXXXXX",
+    "MV": "+960 XXX XXXX",
+    "ML": "+223 XX XX XX XX",
+    "MT": "+356 XXXX XXXX",
+    "MH": "+692 XXX-XXXX",
+    "MR": "+222 XXXX-XXXX",
+    "MU": "+230 XXXX XXXX",
+    "MX": "+52 XXX XXX XXXX",
+    "MD": "+373 XXXX-XXXX",
+    "MC": "+377 XX XX XX XX",
+    "MN": "+976 XX XX XXXX",
+    "ME": "+382 XX XXX XXX",
+    "MA": "+212 XXXX-XXXXX",
+    "MZ": "+258 XX XXX XXX",
+    "MM": "+95 XX XXX XXX",
+    "NA": "+264 XX XXX XXXX",
+    "NR": "+674 XXX XXXX",
+    "NP": "+977 XXX-XXXXXXX",
+    "NL": "+31 X XXX XXXX",
+    "NZ": "+64 X-XXX XXXX",
+    "NI": "+505 XXXX-XXXX",
+    "NE": "+227 XX XX XX XX",
+    "NG": "+234 XXX XXX XXXX",
+    "NO": "+47 XXX XX XXX",
+    "OM": "+968 XXXX XXXX",
+    "PK": "+92 XXXX XXXXXXX",
+    "PW": "+680 XXX-XXXX",
+    "PA": "+507 XXXX-XXXX",
+    "PG": "+675 XXXX-XXXX",
+    "PY": "+595 XX XXX-XXXX",
+    "PE": "+51 XXX-XXXXXX",
+    "PH": "+63 XXX XXX XXXX",
+    "PL": "+48 XXX-XXX-XXX",
+    "PT": "+351 XXX XXX XXX",
+    "QA": "+974 XXXX XXXX",
+    "RO": "+40 XXXX XXXXX",
+    "RU": "+7 XXX-XXX-XX-XX",
+    "RW": "+250 XXXX XXX XXX",
+    "KN": "+1 (869) XXX-XXXX",
+    "LC": "+1 (758) XXX-XXXX",
+    "VC": "+1 (784) XXX-XXXX",
+    "WS": "+685 XXXXX",
+    "SM": "+378 XXX XXXXXX",
+    "ST": "+239 XXXX XXXX",
+    "SA": "+966 XXX XXX XXXX",
+    "SN": "+221 XXXX-XXXXX",
+    "RS": "+381 XX XXXX XXX",
+    "SC": "+248 XX XXXXX",
+    "SL": "+232 XX XXXXXX",
+    "SG": "+65 XXXX XXXX",
+    "SK": "+421 XXX XXX XXX",
+    "SI": "+386 XX XXX XXX",
+    "SB": "+677 XXXXX",
+    "SO": "+252 XXX XXX XXX",
+    "ZA": "+27 XX XXX XXXX",
+    "ES": "+34 XXX XXX XXX",
+    "LK": "+94 XX XXX XXXX",
+    "SD": "+249 XXX XXX XXXX",
+    "SR": "+597 XXX XXXX",
+    "SZ": "+268 XXXX XXXX",
+    "SE": "+46 XX-XXX XX XX",
+    "CH": "+41 XX XXX XX XX",
+    "SY": "+963 XX XXX XXXX",
+    "TW": "+886 XXXX-XXXXXX",
+    "TJ": "+992 XX XXX XXXX",
+    "TZ": "+255 XXX XXX XXX",
+    "TH": "+66 XX XXX XXXX",
+    "TL": "+670 XXXX-XXXX",
+    "TG": "+228 XX XX XX XX",
+    "TO": "+676 XXXXX",
+    "TT": "+1 (868) XXX-XXXX",
+    "TN": "+216 XX XXX XXX",
+    "TR": "+90 XXX XXX XXXX",
+    "TM": "+993 XX XXXXXX",
+    "TV": "+688 XXXXX",
+    "UG": "+256 XXX XXX XXX",
+    "UA": "+380 XX XXX XXXX",
+    "AE": "+971 XXX XXX XXXX",
+    "GB": "+44 XXXX XXX XXX",
+    "US": "+1 (XXX) XXX-XXXX",
+    "UY": "+598 XXXX XX XX",
+    "UZ": "+998 XX XXX-XX-XX",
+    "VU": "+678 XXXXX",
+    "VE": "+58 XXXX-XXX-XXXX",
+    "VN": "+84 XXX XXX XXXX",
+    "YE": "+967 XXX XXX XXX",
+    "ZM": "+260 XXX XXX XXX",
+    "ZW": "+263 XX XXX XXXX",
+        };
+    </script>
+</body>
+<footer>
+    <p>&copy; 2024 Marvel TV. All rights reserved.</p>
+</footer>
+</html>

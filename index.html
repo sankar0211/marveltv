@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marvel TV</title>
+    <style>
+        body {
+            color: #ffffff;
+            font-size: larger;
+            display: flex;
+            flex-direction: column;
+            font-family: 'Poppins', Arial, Helvetica, sans-serif;
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            background-color: #02011a;
+            overflow-x: hidden;
+        }
+        header {
+            font-family: 'BentonSansCompBlack', sans-serif;
+            background-color: #000000;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(16, 92, 130, 0.5);
+            font-size: 30px;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #172b6f;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+            animation: fadeIn 0.5s ease-in-out;
+        }
+        nav a {
+            color: #fff;
+            padding: 14px 20px;
+            text-decoration: none;
+            text-align: center;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+        nav a:hover {
+            background-color: #067573;
+            transform: scale(1.1);
+        }
+        main {
+            padding: 20px;
+            margin: 20px 50px;
+            flex: 2;
+        }
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+            width: 100%;
+            bottom: 0;
+            position: relative;
+            
+        }
+        p {
+            color: #ffffff;
+            font-family: "DM Sans", sans-serif;
+            font-weight: 300;
+            font-style: normal;
+            font-size: 25px;
+            white-space: pre-wrap;
+        }
+        .intro {
+            font-size: 30px;
+            font-family: 'Poppins', sans-serif;
+            text-align: center;
+            margin-bottom: 20px;
+            animation: fadeIn 3.5s ease-in-out;
+        }
+        section {
+            margin-bottom: 40px;
+            padding: 20px;
+            background: rgba(19, 28, 60, 0.8);
+            border-radius: 50px;
+            box-shadow: 0 4px 8px rgba(39, 53, 124, 0.5);
+            animation: slideUp 3.5s ease-in-out;
+        }
+        section h3 {
+            font-size: 30px;
+            margin-bottom: 15px;
+        }
+        section h4 {
+            font-size: 24px;
+            margin-top: 15px;
+        }
+        iframe {
+            display: block;
+            margin: 0 auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+            transition: transform 0.3s;
+        }
+        iframe:hover {
+            transform: scale(1.05);
+        }
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+        @keyframes slideUp {
+            from {
+                transform: translateY(100px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+        .fade-in {
+    animation: fadeIn 2s ease-in-out;
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&family=Andika:wght@400&family=Poppins:wght@400&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <img src="./img/marvellogo.png" alt="No Image" height="80px">
+    </header>
+    <nav>
+        <a href="./index.html">Home</a>
+        <a href="./characters.html">Characters</a>
+        <a href="./shows.html">Shows</a>
+        <a href="./join.html">Join Us</a>
+        <a href="./contact.html">Contact</a>
+        <a href="./about.html">About Us</a>
+    </nav>
+    <img src="./img/marvel bg.png" alt="No Image" width="100%" class="fade-in" >
+    <main>
+        <div class="intro">
+            <h2>Top Trailers</h2>
+            <p style="font-size: 30px; font-family: 'Roboto', sans-serif; font-weight: 300;">Stay tuned for the latest and greatest in entertainment. Check out our featured clips below!</p>
+        </div>
+        <section>
+            <h3>The Avengers: Infinity War | Trailer</h3>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/6ZfuNTqbHE8?si=fPcbQBlnudzLm63v" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <h4>Description</h4>
+            <p>The Avengers: Infinity War (2018) is an electrifying preview of the epic showdown between the Avengers and Thanos. Opening with reflections from key heroes, it quickly escalates to Thanos' arrival and his quest for the Infinity Stones. The trailer features intense action scenes with Iron Man, Spider-Man, Doctor Strange, and the Guardians of the Galaxy, showcasing the high stakes. The Wakandan army, led by Black Panther, prepares for battle. The ominous tone and powerful visuals highlight Thanos' overwhelming strength. The trailer ends with a dramatic confrontation, leaving viewers breathless and eagerly anticipating the film's release.</p>
+        </section>
+        <section>
+            <h3>The Avengers: Endgame | Trailer</h3>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/TcMBFSGVi1c?si=-fK9wK4eLwVcPWLH" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <h4>Description</h4>
+            <p>The Avengers: Endgame (2019) is an emotionally charged and dramatic preview of the climactic conclusion to Marvel's Infinity Saga. It begins with somber reflections from key characters, such as Tony Stark recording a farewell message and Steve Rogers reminiscing about the past. The trailer captures the aftermath of Thanos' devastating snap, showing a world in despair and heroes grappling with their losses. It highlights the resolve and determination of the remaining Avengers—Iron Man, Captain America, Thor, Hulk, Black Widow, and Hawkeye—as they plan to undo the catastrophe and bring back their fallen comrades. The trailer teases high-stakes action and epic battles, interspersed with heartfelt moments and reunions. Iconic lines, such as "Whatever it takes," underscore the team's commitment and desperation. Dramatic music and poignant visuals heighten the emotional intensity, with glimpses of advanced technology, new suits, and alliances forming. The overall tone is one of hope, resilience, and the readiness to make the ultimate sacrifice, leaving fans eagerly anticipating the epic showdown and resolution.</p>
+        </section>
+        <section>
+            <h3>Spider-Man: No Way Home | Trailer</h3>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/JfVOs4VSpmA?si=HJPOYw4PNwWoyoNA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <h4>Description</h4>
+            <p>Spider-Man: No Way Home (2021) is a Marvel film starring Tom Holland as Peter Parker/Spider-Man. Following the events of Far From Home, Peter's secret identity is exposed, causing chaos in his life. Seeking help, he turns to Doctor Strange (Benedict Cumberbatch) to cast a spell that will make everyone forget he's Spider-Man. However, the spell goes awry, fracturing the multiverse and bringing villains from other dimensions into Peter's world, including Doctor Octopus (Alfred Molina), Green Goblin (Willem Dafoe), and Electro (Jamie Foxx). The trailer highlights Peter's struggle with his exposed identity, his desperate plea to Doctor Strange, and the catastrophic consequences of the failed spell. Iconic villains from previous Spider-Man films appear, creating high stakes and intense action. The film explores themes of identity, responsibility, and the multiverse, culminating in a thrilling crossover event within the Marvel Cinematic Universe.</p>
+        </section>
+        <section>
+            <h3>The Avengers | Trailer</h3>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/eOrNdBpGMv8?si=ANL4rdUI1-evy2Ez" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <h4>Description</h4>
+            <p>The Avengers (2012) is a Marvel film directed by Joss Whedon, featuring an ensemble cast including Robert Downey Jr. as Iron Man, Chris Evans as Captain America, Chris Hemsworth as Thor, Mark Ruffalo as the Hulk, Scarlett Johansson as Black Widow, and Jeremy Renner as Hawkeye. The film follows Nick Fury (Samuel L. Jackson), the director of S.H.I.E.L.D., as he assembles a team of superheroes to stop the villain Loki (Tom Hiddleston) from conquering Earth using the Tesseract, a powerful energy source. The trailer highlights key moments such as the assembly of the Avengers team, their initial conflicts, and epic battle scenes in New York City. It showcases each hero's unique abilities and personality, emphasizing their need to overcome differences to work together. The film explores themes of teamwork, sacrifice, and heroism, delivering a high-stakes, action-packed spectacle that sets the stage for future Marvel Cinematic Universe collaborations.</p>
+        </section>
+        <section>
+            <h3>Avengers: Age of Ultron | Trailer</h3>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/tmeOjFno6Do?si=MAGleT4mOVeJfUkh" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <h4>Description</h4>
+            <p>Avengers: Age of Ultron (2015) is a Marvel film directed by Joss Whedon, starring Robert Downey Jr. as Iron Man, Chris Evans as Captain America, Chris Hemsworth as Thor, Mark Ruffalo as the Hulk, Scarlett Johansson as Black Widow, and Jeremy Renner as Hawkeye. In this sequel, the Avengers face a new threat: Ultron (voiced by James Spader), an artificial intelligence created by Tony Stark and Bruce Banner that turns rogue and seeks to exterminate humanity. The trailer highlights the Avengers' battle against Ultron and his army of robots, showcasing intense action sequences and dramatic moments. It introduces new characters, including Wanda Maximoff/Scarlet Witch (Elizabeth Olsen) and Pietro Maximoff/Quicksilver (Aaron Taylor-Johnson). The trailer also teases internal conflicts among the Avengers, exploring themes of power, responsibility, and the unintended consequences of technology. "Avengers: Age of Ultron" delivers a thrilling, action-packed adventure that tests the unity and resolve of Earth's mightiest heroes.</p>
+        </section>
+        <section>
+            <h3>Black Panther | Trailer</h3>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/xjDjIWPwcPU?si=XdFKoZIyORkF0NdG" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <h4>Description</h4>
+            <p>Black Panther (2018) is a Marvel film directed by Ryan Coogler, starring Chadwick Boseman as T'Challa/Black Panther. Following the events of "Captain America: Civil War," T'Challa returns to the isolated, technologically advanced African nation of Wakanda to take his place as king. However, his sovereignty is challenged by Erik Killmonger (Michael B. Jordan), who has his own plans for Wakanda's future. The trailer highlights the stunning visuals of Wakanda, showcasing its advanced technology and rich culture. It features intense action scenes with T'Challa in his Black Panther suit, as well as the conflict between him and Killmonger. Key characters like Nakia (Lupita Nyong'o), Okoye (Danai Gurira), and Shuri (Letitia Wright) are introduced, emphasizing themes of heritage, responsibility, and leadership. "Black Panther" delivers a powerful and groundbreaking narrative that explores identity and the impact of colonialism, while offering an exhilarating and visually spectacular superhero experience.</p>
+        </section>
+    </main>
+    <footer >
+        <p>&copy; 2024 Marvel TV. All rights reserved.</p>
+    </footer>
+</body>
+</html>
