@@ -21,10 +21,10 @@
             font-family: 'BentonSansCompBlack', sans-serif;
             background-color: #000000;
             color: #fff;
-            padding: 20px 0;
+            padding: 1em 0;
             text-align: center;
             box-shadow: 0 4px 8px rgba(16, 92, 130, 0.5);
-            font-size: 30px;
+            font-size: 1.875rem;
         }
         nav {
             display: flex;
@@ -32,70 +32,72 @@
             background-color: #172b6f;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
             animation: fadeIn 0.5s ease-in-out;
+            flex-wrap: wrap;
         }
         nav a {
             color: #fff;
-            padding: 14px 20px;
+            padding: 0.875em 1.25em;
             text-decoration: none;
             text-align: center;
             transition: background-color 0.3s, transform 0.3s;
+            font-size: 1rem;
         }
         nav a:hover {
             background-color: #067573;
             transform: scale(1.1);
         }
         main {
-            padding: 20px;
-            margin: 20px 50px;
+            padding: 1.25em;
+            margin: 1.25em 3.125em;
             flex: 2;
         }
         footer {
             background-color: #333;
             color: #fff;
-            padding: 10px 0;
+            padding: 0.625em 0;
             text-align: center;
             width: 100%;
-            bottom: 0;
             position: relative;
-            
         }
         p {
             color: #ffffff;
             font-family: "DM Sans", sans-serif;
             font-weight: 300;
             font-style: normal;
-            font-size: 25px;
+            font-size: 1.563rem;
             white-space: pre-wrap;
         }
         .intro {
-            font-size: 30px;
+            font-size: 1.875rem;
             font-family: 'Poppins', sans-serif;
             text-align: center;
-            margin-bottom: 20px;
+            margin-bottom: 1.25em;
             animation: fadeIn 3.5s ease-in-out;
         }
         section {
-            margin-bottom: 40px;
-            padding: 20px;
+            margin-bottom: 2.5em;
+            padding: 1.25em;
             background: rgba(19, 28, 60, 0.8);
-            border-radius: 50px;
+            border-radius: 1.875em;
             box-shadow: 0 4px 8px rgba(39, 53, 124, 0.5);
             animation: slideUp 3.5s ease-in-out;
         }
         section h3 {
-            font-size: 30px;
-            margin-bottom: 15px;
+            font-size: 1.875rem;
+            margin-bottom: 0.938em;
         }
         section h4 {
-            font-size: 24px;
-            margin-top: 15px;
+            font-size: 1.5rem;
+            margin-top: 0.938em;
         }
         iframe {
             display: block;
             margin: 0 auto;
-            border-radius: 10px;
+            border-radius: 0.625em;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
             transition: transform 0.3s;
+            width: 100%;
+            max-width: 560px;
         }
         iframe:hover {
             transform: scale(1.05);
@@ -119,13 +121,59 @@
             }
         }
         .fade-in {
-    animation: fadeIn 2s ease-in-out;
-  }
+            animation: fadeIn 2s ease-in-out;
+        }
 
-  @keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
-  }
+        @media (max-width: 768px) {
+            main {
+                margin: 1.25em;
+                padding: 1em;
+            }
+            nav a {
+                padding: 0.625em 1em;
+                font-size: 0.875rem;
+            }
+            section {
+                padding: 1em;
+                margin-bottom: 1.875em;
+            }
+            section h3 {
+                font-size: 1.5rem;
+            }
+            section h4 {
+                font-size: 1.25rem;
+            }
+            p {
+                font-size: 1.25rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            header {
+                font-size: 1.5rem;
+            }
+            nav a {
+                padding: 0.5em 0.75em;
+                font-size: 0.75rem;
+            }
+            main {
+                margin: 1em;
+                padding: 0.875em;
+            }
+            section {
+                padding: 0.875em;
+                margin-bottom: 1.25em;
+            }
+            section h3 {
+                font-size: 1.25rem;
+            }
+            section h4 {
+                font-size: 1.125rem;
+            }
+            p {
+                font-size: 1rem;
+            }
+        }
     </style>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -136,7 +184,7 @@
 </head>
 <body>
     <header>
-        <img src="./img/marvellogo.png" alt="No Image" height="80px">
+        <img src="./img/marvellogo.png" alt="Marvel Logo" height="80px">
     </header>
     <nav>
         <a href="./index.html">Home</a>
@@ -146,15 +194,15 @@
         <a href="./contact.html">Contact</a>
         <a href="./about.html">About Us</a>
     </nav>
-    <img src="./img/marvel bg.png" alt="No Image" width="100%" class="fade-in" >
+    <img src="./img/marvel bg.png" alt="Marvel Background" width="100%" class="fade-in">
     <main>
         <div class="intro">
             <h2>Top Trailers</h2>
-            <p style="font-size: 30px; font-family: 'Roboto', sans-serif; font-weight: 300;">Stay tuned for the latest and greatest in entertainment. Check out our featured clips below!</p>
+            <p style="font-size: 1.875rem; font-family: 'Roboto', sans-serif; font-weight: 300;">Stay tuned for the latest and greatest in entertainment. Check out our featured clips below!</p>
         </div>
         <section>
             <h3>The Avengers: Infinity War | Trailer</h3>
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/6ZfuNTqbHE8?si=fPcbQBlnudzLm63v" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <iframe src="https://www.youtube.com/embed/6ZfuNTqbHE8?si=fPcbQBlnudzLm63v" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
             <h4>Description</h4>
             <p>The Avengers: Infinity War (2018) is an electrifying preview of the epic showdown between the Avengers and Thanos. Opening with reflections from key heroes, it quickly escalates to Thanos' arrival and his quest for the Infinity Stones. The trailer features intense action scenes with Iron Man, Spider-Man, Doctor Strange, and the Guardians of the Galaxy, showcasing the high stakes. The Wakandan army, led by Black Panther, prepares for battle. The ominous tone and powerful visuals highlight Thanos' overwhelming strength. The trailer ends with a dramatic confrontation, leaving viewers breathless and eagerly anticipating the film's release.</p>
         </section>
