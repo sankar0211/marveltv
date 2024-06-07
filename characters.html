@@ -174,7 +174,20 @@ iframe:hover {
 }
 
 /* Mobile-first styles */
+nav .nav-toggle {
+    display: none;
+}
 @media (max-width: 600px) {
+    nav {
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    nav a {
+        padding: 0.75em 1em;
+        font-size: 0.875rem;
+    }
     .grid-item img {
         height: auto; /* Adjust image height to maintain aspect ratio */
     }
