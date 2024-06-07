@@ -5,126 +5,248 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Join</title>
     <style>
-        body {
-            color: #ffffff;
-            font-size: larger;
-            display: flex;
-            flex-direction: column;
-            font-family: 'Poppins', Arial, Helvetica, sans-serif;
-            margin: 0;
-            padding: 0;
-            min-height: 100vh;
-            background-color: #02011a;
-            overflow-x: hidden;
-        }
-        header {
-            font-family: 'BentonSansCompBlack', sans-serif;
-            background-color: #000000;
-            color: #fff;
-            padding: 20px 0;
-            text-align: center;
-            box-shadow: 0 4px 8px rgba(16, 92, 130, 0.5);
-            font-size: 30px;
-        }
-        nav {
-            display: flex;
-            justify-content: center;
-            background-color: #172b6f;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
-            animation: fadeIn 0.5s ease-in-out;
-        }
-        nav a {
-            color: #fff;
-            padding: 14px 20px;
-            text-decoration: none;
-            text-align: center;
-            transition: background-color 0.3s, transform 0.3s;
-        }
-        nav a:hover {
-            background-color: #067573;
-            transform: scale(1.1);
-        }
-        main {
-            padding: 20px;
-            margin: 20px 50px;
-            flex: 2;
-        }
-        footer {
-            background-color: #333;
-            color: #fff;
-            padding: 10px 0;
-            text-align: center;
-            width: 100%;
-            bottom: 0;
-            position: relative;
-        }
-        p {
-            color: #ffffff;
-            font-family: "DM Sans", sans-serif;
-            font-weight: 300;
-            font-style: normal;
-            font-size: 25px;
-            white-space: pre-wrap;
-        }
-        form {
-            font-family: "DM Sans", sans-serif;
-            background-color: #0e0335;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
-            display: flex;
-            flex-direction: column;
-            gap: 15px;
-            animation: slideUp 2.5s ease-in-out;
-        }
-        label {
-            font-size: 18px;
-            font-weight: bold;
-        }
-        input, select {
-            padding: 10px;
-            border: none;
-            border-radius: 5px;
-            font-size: 16px;
-        }
-        button {
-            padding: 10px;
-            background-color: #067573;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            font-size: 18px;
-            transition: background-color 0.3s, transform 0.3s;
-        }
-        section {
-            font-family: "DM Sans", sans-serif;
-        }
-        section input{
-            font-family: "DM Sans", sans-serif;
-        }
-        button:hover {
-            background-color: #045a5a;
-            transform: scale(1.05);
-        }
-        @keyframes slideUp {
-            from {
-                transform: translateY(100px);
-                opacity: 0;
-            }
-            to {
-                transform: translateY(0);
-                opacity: 1;
-            }
-        }
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-            }
-            to {
-                opacity: 1;
-            }
-        }
+        /* Base styles */
+body {
+    color: #ffffff;
+    font-size: larger;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Poppins', Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    background-color: #02011a;
+    overflow-x: hidden;
+}
+
+header {
+    font-family: 'BentonSansCompBlack', sans-serif;
+    background-color: #000000;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(16, 92, 130, 0.5);
+    font-size: 30px;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    background-color: #172b6f;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+nav a {
+    color: #fff;
+    padding: 14px 20px;
+    text-decoration: none;
+    text-align: center;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+nav a:hover {
+    background-color: #067573;
+    transform: scale(1.1);
+}
+
+main {
+    padding: 20px;
+    margin: 20px 50px;
+    flex: 2;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+    width: 100%;
+    bottom: 0;
+    position: relative;
+}
+
+p {
+    color: #ffffff;
+    font-family: "DM Sans", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 25px;
+    white-space: pre-wrap;
+}
+
+form {
+    font-family: "DM Sans", sans-serif;
+    background-color: #0e0335;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    animation: slideUp 2.5s ease-in-out;
+}
+
+label {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+input, select {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+button {
+    padding: 10px;
+    background-color: #067573;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+section {
+    font-family: "DM Sans", sans-serif;
+}
+
+section input{
+    font-family: "DM Sans", sans-serif;
+}
+
+button:hover {
+    background-color: #045a5a;
+    transform: scale(1.05);
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(100px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Mobile styles */
+nav .nav-toggle {
+    display: none;
+}
+@media (max-width: 600px) {
+    header {
+        padding: 15px 0;
+        font-size: 25px;
+    }
+
+    nav {
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    nav a {
+        padding: 0.75em 1em;
+        font-size: 0.875rem;
+    }
+
+    main {
+        padding: 15px;
+        margin: 15px 30px;
+    }
+
+    footer {
+        padding: 8px 0;
+    }
+
+    p {
+        font-size: 22px;
+    }
+
+    form {
+        padding: 15px;
+    }
+
+    label {
+        font-size: 16px;
+    }
+
+    input, select {
+        padding: 8px;
+        font-size: 14px;
+    }
+
+    button {
+        padding: 8px;
+        font-size: 16px;
+    }
+
+    section {
+        padding: 15px;
+    }
+}
+
+/* Tablet styles */
+@media (min-width: 601px) and (max-width: 1024px) {
+    header {
+        padding: 15px 0;
+        font-size: 25px;
+    }
+
+    nav a {
+        padding: 12px 18px;
+    }
+
+    main {
+        padding: 15px;
+        margin: 15px 30px;
+    }
+
+    footer {
+        padding: 8px 0;
+    }
+
+    p {
+        font-size: 22px;
+    }
+
+    form {
+        padding: 15px;
+    }
+
+    label {
+        font-size: 16px;
+    }
+
+    input, select {
+        padding: 8px;
+        font-size: 14px;
+    }
+
+    button {
+        padding: 8px;
+        font-size: 16px;
+    }
+
+    section {
+        padding: 15px;
+    }
+}
+
     </style>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
